@@ -36,12 +36,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FilterControls">
-      <HintPath>..\..\Application_Trial_Maker\TrialMaker\TrialMaker\bin\Debug\FilterControls.dll</HintPath>
+      <HintPath>..\Libraries\TrialMakerDependencies\$(Configuration)\FilterControls.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="SerialBoxes, Version=1.0.2435.24514, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\SerialBox\SerialBox\bin\Debug\SerialBoxes.dll</HintPath>
+    <Reference Include="SerialBoxes">
+      <HintPath>..\Libraries\TrialMakerDependencies\$(Configuration)\SerialBoxes.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
