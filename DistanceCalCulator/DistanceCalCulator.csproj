@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FF36D741-9C88-4446-A756-3F59EBAC1E4F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DistanceCalCulator</RootNamespace>
+    <AssemblyName>QuickNavPlanner</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>QuickNavPlanner 1.1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\QuickNavPlanner.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\QuickNavPlanner.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.EARTHLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>GEDependencies\$(Configuration)\Interop.EARTHLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.GEPlugin, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>GEDependencies\$(Configuration)\Interop.GEPlugin.dll</HintPath>
+    </Reference>
+    <Reference Include="MigraDoc.Rendering, Version=1.32.3885.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>MigraPDFDependencies\MigraDoc.Rendering.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.32.2608.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>MigraPDFDependencies\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.32.2608.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>MigraPDFDependencies\PdfSharp.Charting.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpKml">
+      <HintPath>SharpKml\$(Configuration)\SharpKml.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\SqlCompact\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libraries\SqlCompact\System.Data.SqlServerCe.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutQNP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutQNP.Designer.cs">
+      <DependentUpon>AboutQNP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addDataForm.Designer.cs">
+      <DependentUpon>addDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Airport.cs" />
+    <Compile Include="AirportDatabase.cs" />
+    <Compile Include="ApplicationState.cs" />
+    <Compile Include="DataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataForm.Designer.cs">
+      <DependentUpon>DataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Disclaimer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Disclaimer.Designer.cs">
+      <DependentUpon>Disclaimer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FlightPlanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlightPlanForm.Designer.cs">
+      <DependentUpon>FlightPlanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="File_Search_Window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="File_Search_Window.Designer.cs">
+      <DependentUpon>File_Search_Window.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Google_Earth_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Google_Earth_View.Designer.cs">
+      <DependentUpon>Google_Earth_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FoundInfoEventArgs.cs" />
+    <Compile Include="Create_Routes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Create_Routes.Designer.cs">
+      <DependentUpon>Create_Routes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help.Designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Form_New_Design2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Form_New_Design2.Designer.cs">
+      <DependentUpon>Main_Form_New_Design2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pilot.cs" />
+    <Compile Include="PilotForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PilotForm.Designer.cs">
+      <DependentUpon>PilotForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PilotsDatabase.cs" />
+    <Compile Include="File_Searcher.cs" />
+    <Compile Include="File_SearcherParams.cs" />
+    <Compile Include="File_ThreadEndedEventArgs.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Register_product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register_product.Designer.cs">
+      <DependentUpon>Register_product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchSetting.Designer.cs">
+      <DependentUpon>SearchSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Technical_Support.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Technical_Support.Designer.cs">
+      <DependentUpon>Technical_Support.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnitsSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnitsSetup.Designer.cs">
+      <DependentUpon>UnitsSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="identTextBox.cs" />
+    <Compile Include="identTextBox_2.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="File_UserConfig.cs" />
+    <Compile Include="Utils.cs" />
+    <EmbeddedResource Include="AboutQNP.resx">
+      <DependentUpon>AboutQNP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addDataForm.resx">
+      <DependentUpon>addDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataForm.resx">
+      <DependentUpon>DataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Disclaimer.resx">
+      <DependentUpon>Disclaimer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlightPlanForm.resx">
+      <DependentUpon>FlightPlanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="File_Search_Window.resx">
+      <DependentUpon>File_Search_Window.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Google_Earth_View.resx">
+      <DependentUpon>Google_Earth_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Create_Routes.resx">
+      <DependentUpon>Create_Routes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help.resx">
+      <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Form_New_Design2.resx">
+      <DependentUpon>Main_Form_New_Design2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PilotForm.resx">
+      <DependentUpon>PilotForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register_product.resx">
+      <DependentUpon>Register_product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchSetting.resx">
+      <DependentUpon>SearchSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Technical_Support.resx">
+      <DependentUpon>Technical_Support.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnitsSetup.resx">
+      <DependentUpon>UnitsSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Content Include="..\QNP_Help\FlightPlan.chm">
+      <Link>QNP_Help\FlightPlan.chm</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\QNP_Help\HowToUse.chm">
+      <Link>QNP_Help\HowToUse.chm</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\QNP_Help\Index.hhk">
+      <Link>QNP_Help\Index.hhk</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\QNP_Help\QNP_Help.chm">
+      <Link>QNP_Help\QNP_Help.chm</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\QNP_Help\QNP_Help.chw">
+      <Link>QNP_Help\QNP_Help.chw</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\QNP_Help\QNP_Help.hhp">
+      <Link>QNP_Help\QNP_Help.hhp</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\QNP_Help\Table of Contents.hhc">
+      <Link>QNP_Help\Table of Contents.hhc</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\QNP_Help\abc.htm">
+      <Link>QNP_Help\abc.htm</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\QNP_Help\AirDataBase.htm">
+      <Link>QNP_Help\AirDataBase.htm</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\QNP_Help\FlightPlan.htm">
+      <Link>QNP_Help\FlightPlan.htm</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\QNP_Help\HowToUse.htm">
+      <Link>QNP_Help\HowToUse.htm</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\QNP_Help\Introduction.htm">
+      <Link>QNP_Help\Introduction.htm</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\QNP_Help\PDFView.htm">
+      <Link>QNP_Help\PDFView.htm</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\QNP_Help\QNP_Pictures\AddDataForm.JPG">
+      <Link>QNP_Help\QNP_Pictures\AddDataForm.JPG</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\QNP_Help\QNP_Pictures\AirDataBase.JPG">
+      <Link>QNP_Help\QNP_Pictures\AirDataBase.JPG</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\QNP_Help\QNP_Pictures\FileSearch.JPG">
+      <Link>QNP_Help\QNP_Pictures\FileSearch.JPG</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\QNP_Help\QNP_Pictures\FlightPlan.JPG">
+      <Link>QNP_Help\QNP_Pictures\FlightPlan.JPG</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\QNP_Help\QNP_Pictures\FlightPlanner.JPG">
+      <Link>QNP_Help\QNP_Pictures\FlightPlanner.JPG</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\QNP_Help\QNP_Pictures\FlightPlan_Fuel.JPG">
+      <Link>QNP_Help\QNP_Pictures\FlightPlan_Fuel.JPG</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\QNP_Help\QNP_Pictures\GoogleView.JPG">
+      <Link>QNP_Help\QNP_Pictures\GoogleView.JPG</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\QNP_Help\QNP_Pictures\PDFView.JPG">
+      <Link>QNP_Help\QNP_Pictures\PDFView.JPG</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\QNP_Help\QNP_Pictures\QNP_Main.JPG">
+      <Link>QNP_Help\QNP_Pictures\QNP_Main.JPG</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\QNP_Help\QNP_Pictures\Routes.JPG">
+      <Link>QNP_Help\QNP_Pictures\Routes.JPG</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\QNP_Help\QNP_Pictures\UnitSetup.JPG">
+      <Link>QNP_Help\QNP_Pictures\UnitSetup.JPG</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\QNP_Help\Routes.htm">
+      <Link>QNP_Help\Routes.htm</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\QNP_Help\UnitSetup.htm">
+      <Link>QNP_Help\UnitSetup.htm</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FlightPlannerDB.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="QuickNavPlanner 1.1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 3.5 SP2</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TrialMaker\TrialMaker.csproj">
+      <Project>{2A803CAE-16F1-44C4-BF6D-2CAE88CDE659}</Project>
+      <Name>TrialMaker</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>mkdir "$(ProjectDir)$(OutDir)AMD64"
+mkdir "$(ProjectDir)$(OutDir)X86"
+copy "$(SolutionDir)Libraries\SqlCompact\AMD64\*.*" "$(ProjectDir)$(OutDir)AMD64"
+copy "$(SolutionDir)Libraries\SqlCompact\X86\*.*" "$(ProjectDir)$(OutDir)X86"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

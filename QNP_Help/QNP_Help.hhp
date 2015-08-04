@@ -1,0 +1,13 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=QNP_Help.chm
+Contents file=Table of Contents.hhc
+Default topic=Introduction
+Display compile progress=No
+Index file=Index.hhk
+Language=0x4009 English (India)
+Title=QNP_Help
+
+
+[INFOTYPES]
+
