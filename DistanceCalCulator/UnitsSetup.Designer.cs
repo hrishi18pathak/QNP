@@ -51,6 +51,9 @@
             this.cmbSpeed = new System.Windows.Forms.ComboBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtRegisteredTo = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_appAndDeckHoldFuel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDn_cruiseFuelFlow)).BeginInit();
@@ -60,6 +63,7 @@
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDn_cruiseSpeed)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -74,9 +78,11 @@
             this.groupBox2.Controls.Add(this.cmbUnit);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
-            this.groupBox2.Location = new System.Drawing.Point(17, 19);
+            this.groupBox2.Location = new System.Drawing.Point(34, 37);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(243, 159);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox2.Size = new System.Drawing.Size(486, 306);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Fuel";
@@ -90,9 +96,10 @@
             0,
             0,
             0});
-            this.numericUpDown_appAndDeckHoldFuel.Location = new System.Drawing.Point(143, 123);
+            this.numericUpDown_appAndDeckHoldFuel.Location = new System.Drawing.Point(286, 237);
+            this.numericUpDown_appAndDeckHoldFuel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.numericUpDown_appAndDeckHoldFuel.Name = "numericUpDown_appAndDeckHoldFuel";
-            this.numericUpDown_appAndDeckHoldFuel.Size = new System.Drawing.Size(85, 26);
+            this.numericUpDown_appAndDeckHoldFuel.Size = new System.Drawing.Size(170, 44);
             this.numericUpDown_appAndDeckHoldFuel.TabIndex = 10;
             this.numericUpDown_appAndDeckHoldFuel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numericUpDown_appAndDeckHoldFuel.ValueChanged += new System.EventHandler(this.numericUpDown_appAndDeckHoldFuel_ValueChanged);
@@ -101,9 +108,10 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(11, 125);
+            this.label8.Location = new System.Drawing.Point(22, 240);
+            this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(113, 30);
+            this.label8.Size = new System.Drawing.Size(223, 58);
             this.label8.TabIndex = 9;
             this.label8.Text = "Approach and \r\nOn Deck  Hold Fuel";
             // 
@@ -111,9 +119,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(11, 59);
+            this.label6.Location = new System.Drawing.Point(22, 113);
+            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(98, 15);
+            this.label6.Size = new System.Drawing.Size(196, 29);
             this.label6.TabIndex = 7;
             this.label6.Text = "Cruise Fuel Flow";
             // 
@@ -126,14 +135,15 @@
             0,
             0,
             0});
-            this.numericUpDn_cruiseFuelFlow.Location = new System.Drawing.Point(144, 48);
+            this.numericUpDn_cruiseFuelFlow.Location = new System.Drawing.Point(288, 92);
+            this.numericUpDn_cruiseFuelFlow.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.numericUpDn_cruiseFuelFlow.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.numericUpDn_cruiseFuelFlow.Name = "numericUpDn_cruiseFuelFlow";
-            this.numericUpDn_cruiseFuelFlow.Size = new System.Drawing.Size(84, 26);
+            this.numericUpDn_cruiseFuelFlow.Size = new System.Drawing.Size(168, 44);
             this.numericUpDn_cruiseFuelFlow.TabIndex = 1;
             this.numericUpDn_cruiseFuelFlow.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numericUpDn_cruiseFuelFlow.Value = new decimal(new int[] {
@@ -151,14 +161,15 @@
             0,
             0,
             0});
-            this.numericUpDn_minFuel.Location = new System.Drawing.Point(144, 85);
+            this.numericUpDn_minFuel.Location = new System.Drawing.Point(288, 163);
+            this.numericUpDn_minFuel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.numericUpDn_minFuel.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.numericUpDn_minFuel.Name = "numericUpDn_minFuel";
-            this.numericUpDn_minFuel.Size = new System.Drawing.Size(84, 26);
+            this.numericUpDn_minFuel.Size = new System.Drawing.Size(168, 44);
             this.numericUpDn_minFuel.TabIndex = 2;
             this.numericUpDn_minFuel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numericUpDn_minFuel.Value = new decimal(new int[] {
@@ -171,9 +182,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 22);
+            this.label2.Location = new System.Drawing.Point(22, 42);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 15);
+            this.label2.Size = new System.Drawing.Size(55, 29);
             this.label2.TabIndex = 5;
             this.label2.Text = "Unit";
             // 
@@ -181,9 +193,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(11, 96);
+            this.label1.Location = new System.Drawing.Point(22, 185);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 15);
+            this.label1.Size = new System.Drawing.Size(106, 29);
             this.label1.TabIndex = 2;
             this.label1.Text = "Min Fuel";
             // 
@@ -195,18 +208,21 @@
             "Kgs",
             "Lbs",
             "US Gallons"});
-            this.cmbUnit.Location = new System.Drawing.Point(144, 13);
+            this.cmbUnit.Location = new System.Drawing.Point(288, 25);
+            this.cmbUnit.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.cmbUnit.Name = "cmbUnit";
-            this.cmbUnit.Size = new System.Drawing.Size(84, 24);
+            this.cmbUnit.Size = new System.Drawing.Size(164, 38);
             this.cmbUnit.TabIndex = 0;
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.Controls.Add(this.cmbLocationFormat);
-            this.groupBox4.Location = new System.Drawing.Point(266, 113);
+            this.groupBox4.Location = new System.Drawing.Point(532, 217);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(246, 65);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox4.Size = new System.Drawing.Size(492, 125);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             // 
@@ -214,9 +230,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 26);
+            this.label5.Location = new System.Drawing.Point(12, 50);
+            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 15);
+            this.label5.Size = new System.Drawing.Size(186, 29);
             this.label5.TabIndex = 6;
             this.label5.Text = "Location Format";
             // 
@@ -228,18 +245,21 @@
             "hddd°mm\'ss.s\"",
             "hddd.ddddd°",
             "hddd°mm.mmm\'"});
-            this.cmbLocationFormat.Location = new System.Drawing.Point(101, 21);
+            this.cmbLocationFormat.Location = new System.Drawing.Point(202, 40);
+            this.cmbLocationFormat.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.cmbLocationFormat.Name = "cmbLocationFormat";
-            this.cmbLocationFormat.Size = new System.Drawing.Size(121, 24);
+            this.cmbLocationFormat.Size = new System.Drawing.Size(238, 38);
             this.cmbLocationFormat.TabIndex = 0;
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.cmbUtcOffset);
-            this.groupBox3.Location = new System.Drawing.Point(266, 19);
+            this.groupBox3.Location = new System.Drawing.Point(532, 37);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(246, 74);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox3.Size = new System.Drawing.Size(492, 142);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             // 
@@ -247,9 +267,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 32);
+            this.label4.Location = new System.Drawing.Point(12, 62);
+            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 15);
+            this.label4.Size = new System.Drawing.Size(132, 29);
             this.label4.TabIndex = 6;
             this.label4.Text = "UTC Offset";
             // 
@@ -257,7 +278,7 @@
             // 
             this.cmbUtcOffset.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbUtcOffset.FormattingEnabled = true;
-            this.cmbUtcOffset.ItemHeight = 16;
+            this.cmbUtcOffset.ItemHeight = 30;
             this.cmbUtcOffset.Items.AddRange(new object[] {
             "-12:00",
             "-11:45",
@@ -356,9 +377,10 @@
             "+11:30",
             "+11:45",
             "+12:00"});
-            this.cmbUtcOffset.Location = new System.Drawing.Point(101, 27);
+            this.cmbUtcOffset.Location = new System.Drawing.Point(202, 52);
+            this.cmbUtcOffset.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.cmbUtcOffset.Name = "cmbUtcOffset";
-            this.cmbUtcOffset.Size = new System.Drawing.Size(121, 24);
+            this.cmbUtcOffset.Size = new System.Drawing.Size(238, 38);
             this.cmbUtcOffset.TabIndex = 1;
             // 
             // groupBox5
@@ -367,9 +389,11 @@
             this.groupBox5.Controls.Add(this.numericUpDn_cruiseSpeed);
             this.groupBox5.Controls.Add(this.label3);
             this.groupBox5.Controls.Add(this.cmbSpeed);
-            this.groupBox5.Location = new System.Drawing.Point(17, 184);
+            this.groupBox5.Location = new System.Drawing.Point(34, 354);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(242, 76);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox5.Size = new System.Drawing.Size(484, 146);
             this.groupBox5.TabIndex = 1;
             this.groupBox5.TabStop = false;
             // 
@@ -377,9 +401,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(11, 50);
+            this.label7.Location = new System.Drawing.Point(22, 96);
+            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(81, 15);
+            this.label7.Size = new System.Drawing.Size(161, 29);
             this.label7.TabIndex = 9;
             this.label7.Text = "Cruise Speed";
             // 
@@ -392,14 +417,15 @@
             0,
             0,
             0});
-            this.numericUpDn_cruiseSpeed.Location = new System.Drawing.Point(143, 42);
+            this.numericUpDn_cruiseSpeed.Location = new System.Drawing.Point(286, 81);
+            this.numericUpDn_cruiseSpeed.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.numericUpDn_cruiseSpeed.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.numericUpDn_cruiseSpeed.Name = "numericUpDn_cruiseSpeed";
-            this.numericUpDn_cruiseSpeed.Size = new System.Drawing.Size(84, 26);
+            this.numericUpDn_cruiseSpeed.Size = new System.Drawing.Size(168, 44);
             this.numericUpDn_cruiseSpeed.TabIndex = 2;
             this.numericUpDn_cruiseSpeed.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numericUpDn_cruiseSpeed.Value = new decimal(new int[] {
@@ -412,9 +438,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(11, 21);
+            this.label3.Location = new System.Drawing.Point(22, 40);
+            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 15);
+            this.label3.Size = new System.Drawing.Size(133, 29);
             this.label3.TabIndex = 6;
             this.label3.Text = "Speed Unit";
             // 
@@ -426,16 +453,18 @@
             "Knots",
             "Km/hr",
             "Mach"});
-            this.cmbSpeed.Location = new System.Drawing.Point(143, 12);
+            this.cmbSpeed.Location = new System.Drawing.Point(286, 23);
+            this.cmbSpeed.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.cmbSpeed.Name = "cmbSpeed";
-            this.cmbSpeed.Size = new System.Drawing.Size(84, 24);
+            this.cmbSpeed.Size = new System.Drawing.Size(164, 38);
             this.cmbSpeed.TabIndex = 0;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(204, 282);
+            this.btnSave.Location = new System.Drawing.Point(408, 542);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(90, 23);
+            this.btnSave.Size = new System.Drawing.Size(180, 44);
             this.btnSave.TabIndex = 4;
             this.btnSave.Text = "Save Settings";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -443,25 +472,60 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.groupBox6);
             this.groupBox1.Controls.Add(this.btnSave);
             this.groupBox1.Controls.Add(this.groupBox5);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(24, 23);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(528, 311);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Size = new System.Drawing.Size(1056, 598);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.txtRegisteredTo);
+            this.groupBox6.Controls.Add(this.label9);
+            this.groupBox6.Location = new System.Drawing.Point(532, 375);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(6);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(6);
+            this.groupBox6.Size = new System.Drawing.Size(492, 125);
+            this.groupBox6.TabIndex = 7;
+            this.groupBox6.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(12, 30);
+            this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(174, 29);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Registered To:";
+            // 
+            // txtRegisteredTo
+            // 
+            this.txtRegisteredTo.Location = new System.Drawing.Point(17, 75);
+            this.txtRegisteredTo.Name = "txtRegisteredTo";
+            this.txtRegisteredTo.ReadOnly = true;
+            this.txtRegisteredTo.Size = new System.Drawing.Size(423, 31);
+            this.txtRegisteredTo.TabIndex = 7;
+            // 
             // UnitsSetup
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(561, 335);
+            this.ClientSize = new System.Drawing.Size(1122, 644);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MaximizeBox = false;
             this.Name = "UnitsSetup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -479,6 +543,8 @@
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDn_cruiseSpeed)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -507,6 +573,9 @@
         public System.Windows.Forms.NumericUpDown numericUpDn_cruiseSpeed;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.NumericUpDown numericUpDown_appAndDeckHoldFuel;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtRegisteredTo;
 
 
         public System.EventHandler UnitsSetup_Load { get; set; }

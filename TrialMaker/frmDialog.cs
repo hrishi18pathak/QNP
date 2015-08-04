@@ -12,6 +12,11 @@ namespace SoftwareLocker
     {
         private string _Pass;
 
+        public string RegisteredClientName
+        {
+            get { return txtRegisteredName.Text; }
+        }
+
         public frmDialog(string BaseString,
             string Password,int DaysToEnd,int Runed, string info)
         {
@@ -20,7 +25,7 @@ namespace SoftwareLocker
             _Pass = Password;
             lblDays.Text = DaysToEnd.ToString() + " Day(s)";
             lblTimes.Text = Runed.ToString() + " Time(s)";
-            lblText.Text = info;
+            //lblText.Text = info;
             if (DaysToEnd <= 0 || Runed <= 0)
             {
                 lblDays.Text = "Finished";
@@ -33,9 +38,16 @@ namespace SoftwareLocker
 
         private void btnOK_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtRegisteredName.Text))
+            {
+                MessageBox.Show("Please enter a valid registration name before registering!", "Registration Name",
+                  MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
             if (_Pass == sebPassword.Text)
             {
-                MessageBox.Show("Password is correct", "Password",
+                MessageBox.Show("Password is correct. User is not registered", "Password",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.DialogResult = DialogResult.OK;
             }

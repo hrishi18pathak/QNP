@@ -11,13 +11,19 @@ namespace DistanceCalCulator
 {
     public partial class Main_Form_New_Design2 : Form
     {
-        public Main_Form_New_Design2(bool IsTrial)
+        public Main_Form_New_Design2(bool IsTrial, string registeredClientName)
         {
             InitializeComponent();
             _Trial = IsTrial;
+            // store the registered client name to the db immediately
+            if (!IsTrial && !string.IsNullOrEmpty(registeredClientName))
+            {
+                ApplicationState.Instance.UpdateRegisteredClientName(registeredClientName);
+            }
         }
 
         public bool _Trial { get; set; }
+        public string _RegisteredClientName { get; set; }
 
         private void button8_Click(object sender, EventArgs e)
         {

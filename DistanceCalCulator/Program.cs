@@ -33,22 +33,22 @@ namespace DistanceCalCulator
             7, 9, 20, 36, 37, 21, 101, 57};
                 t.TripleDESKey = MyOwnKey;
 
-                TrialMaker.RunTypes RT = t.ShowDialog();
+                var RT = t.ShowDialog();
                 bool is_trial;
-                if (RT != TrialMaker.RunTypes.Expired)
+                if (RT.Item1 != TrialMaker.RunTypes.Expired)
                 {
-                    if (RT == TrialMaker.RunTypes.Full)
+                    if (RT.Item1 == TrialMaker.RunTypes.Full)
                         is_trial = false;
                     else
                         is_trial = true;
 
-                    Application.Run(new Main_Form_New_Design2(is_trial));
+                    Application.Run(new Main_Form_New_Design2(is_trial, RT.Item2));
 
                 }
             }
             else
             {
-                Application.Run(new Main_Form_New_Design2(true));
+                Application.Run(new Main_Form_New_Design2(true, string.Empty));
             }
         }
 

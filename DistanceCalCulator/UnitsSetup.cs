@@ -14,6 +14,7 @@ namespace DistanceCalCulator
 
         private void LoadUnitsettingfromApplicationState()
         {
+            
             numericUpDn_cruiseFuelFlow.Value = ApplicationState.Instance.getcruiseFuelFlow();
             numericUpDn_cruiseSpeed.Value = ApplicationState.Instance.getCruiseSpeed();
             numericUpDn_minFuel.Value = ApplicationState.Instance.getMinFuelValue();
@@ -22,6 +23,7 @@ namespace DistanceCalCulator
             cmbSpeed.Text = ApplicationState.Instance.getSpeed();
             cmbUnit.Text = ApplicationState.Instance.getUnit();
             cmbUtcOffset.Text = ApplicationState.Instance.getUtcOffset();
+            txtRegisteredTo.Text = ApplicationState.Instance.getRegisteredClientName();
 
         }
 

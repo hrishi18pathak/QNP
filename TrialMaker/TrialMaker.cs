@@ -94,11 +94,11 @@ namespace SoftwareLocker
         /// Show registering dialog to user
         /// </summary>
         /// <returns>Type of running</returns>
-        public RunTypes ShowDialog()
+        public Tuple<RunTypes,string> ShowDialog()
         {
             // check if registered before
             if (CheckRegister() == true)
-                return RunTypes.Full;
+                return new Tuple<RunTypes,string>(RunTypes.Full, string.Empty);
 
             frmDialog PassDialog = new frmDialog(_BaseString, _Password, DaysToEnd(), _Runed, _Text);
             
@@ -112,19 +112,19 @@ namespace SoftwareLocker
                 //Store the timestamp when the application was last opened
                 ModifyTimeStampFile();
             
-                return RunTypes.Full;
+                return new Tuple<RunTypes,string>(RunTypes.Full, PassDialog.RegisteredClientName);
             }
             else if (DR == DialogResult.Retry)
             {
                 //Store the timestamp when the application was last opened
                 ModifyTimeStampFile();
-                return RunTypes.Trial;
+                return new Tuple<RunTypes,string>(RunTypes.Trial,PassDialog.RegisteredClientName);
             }
             else
             {
                 //Store the timestamp when the application was last opened
                 ModifyTimeStampFile();
-                return RunTypes.Expired;
+                return new Tuple<RunTypes,string>(RunTypes.Expired, PassDialog.RegisteredClientName);
             }
         }
 

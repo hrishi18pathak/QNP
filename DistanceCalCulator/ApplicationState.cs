@@ -21,6 +21,7 @@ namespace DistanceCalCulator
         private string unit;
         private string utcOffset;    
         private string locationFormat;
+        private string registeredClientName;
 
         public static ApplicationState Instance
         {
@@ -46,7 +47,7 @@ namespace DistanceCalCulator
                 SqlCeCommand selectCmd = new SqlCeCommand();
                 selectCmd.Connection = _dataConn;
                 StringBuilder selectQuery = new StringBuilder();
-                selectQuery.Append("SELECT cruiseSpeed,cruiseFuelFlow,minFuel,speed,unit,utcOffset,locationFormat,deckHoldFuel FROM ApplicationState");
+                selectQuery.Append("SELECT cruiseSpeed,cruiseFuelFlow,minFuel,speed,unit,utcOffset,locationFormat,deckHoldFuel,registeredClientName FROM ApplicationState");
                 selectCmd.CommandText = selectQuery.ToString();
                 SqlCeResultSet results = selectCmd.ExecuteResultSet(ResultSetOptions.Scrollable);
                 if (results.HasRows)
@@ -60,7 +61,7 @@ namespace DistanceCalCulator
                     utcOffset = results.GetSqlString(5).ToString();
                     locationFormat = results.GetSqlString(6).ToString();
                     deckHoldFuel = results.IsDBNull(7) ? 0 : results.GetInt64(7);
-                   
+                    registeredClientName = results.IsDBNull(8) ? string.Empty : results.GetString(8);
                 }
                 
             }
@@ -69,6 +70,22 @@ namespace DistanceCalCulator
             {
                 _dataConn.Close();
             }
+        }
+
+        public void UpdateRegisteredClientName(string clientName)
+        {
+            registeredClientName = clientName;
+            // update query
+            SqlCeConnection _dataConn = null;
+            _dataConn = new SqlCeConnection("Data Source=FlightPlannerDB.sdf;Persist Security Info=False;");
+            _dataConn.Open();
+            SqlCeCommand updCmd = new SqlCeCommand();
+            updCmd.Connection = _dataConn;
+            StringBuilder updQuery = new StringBuilder();
+            updQuery.Append("UPDATE ApplicationState set ");
+            updQuery.Append("registeredClientName = '" + cruiseSpeed + "'");
+            updCmd.CommandText = updQuery.ToString();
+            updCmd.ExecuteNonQuery();
         }
 
         public void saveToDB()
@@ -98,25 +115,12 @@ namespace DistanceCalCulator
                     updQuery.Append("deckHoldFuel = " + deckHoldFuel + ",");
                     updQuery.Append("speed = '" + speed + "',");
                     updQuery.Append("unit = '" + unit + "',");
-                    updQuery.Append("utcOffset = '" + utcOffset + "',");
-                    updQuery.Append("locationFormat = '" + locationFormat + "'");                   
+                    updQuery.Append("utcOffset = '" + utcOffset + "'");
+                    //updQuery.Append("locationFormat = '" + locationFormat + "'");                   
                     updCmd.CommandText = updQuery.ToString();
                     updCmd.ExecuteNonQuery();
                 
                 }
-                else
-                {
-                    // insert query
-                    SqlCeCommand insertCmd = new SqlCeCommand();
-                    insertCmd.Connection = _dataConn;
-                    StringBuilder insertQuery = new StringBuilder();
-                    insertQuery.Append("insert into ApplicationState (cruiseSpeed , cruiseFuelFlow , minFuel, deckHoldFuel ,  speed , unit , utcOffset , locationFormat) VALUES (");
-                    insertQuery.Append(cruiseSpeed + "," + cruiseFuelFlow + "," + minFuel + "," + deckHoldFuel + "','" + speed + "','" + unit + "','" + utcOffset + "','" + locationFormat + "')");
-                    insertCmd.CommandText = insertQuery.ToString();
-                    insertCmd.ExecuteNonQuery();
-                
-                }
-
             }
             catch (Exception ex)
             {
@@ -228,7 +232,9 @@ namespace DistanceCalCulator
             return locationFormat;
         }
 
-       
-       
+        internal string getRegisteredClientName()
+        {
+            return registeredClientName;
+        }
     }
 }
