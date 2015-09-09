@@ -3,3 +3,5 @@ DistanceCalCulator/obj/
 TrialMaker/bin/
 TrialMaker/obj/
 *.suo
+*.msi
+*.exe

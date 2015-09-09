@@ -949,7 +949,14 @@ namespace DistanceCalCulator
             XFont font2 = new XFont("Aerial", 14, XFontStyle.Italic);
             // Draw the Main Heading text and Caution Note
             //gfx.DrawRoundedRectangle(XBrushes.Navy, 570, 2, 1024, 35, 10, 10);
-            gfx.DrawString("QNP Nav Plan [Raymond Ltd]", font1, XBrushes.Black,
+            string qnpPdfTitle = "QNP Nav Plan";
+            string regClientName = ApplicationState.Instance.getRegisteredClientName();
+            if (!string.IsNullOrWhiteSpace(regClientName))
+            {
+                qnpPdfTitle += "[" + regClientName + "]";
+            }
+
+            gfx.DrawString(qnpPdfTitle, font1, XBrushes.Black,
               new XRect(0, 0, page.Width, page.Height),
               XStringFormats.TopCenter);
             gfx.DrawString("Caution ", font2, XBrushes.Red, 5, 820);

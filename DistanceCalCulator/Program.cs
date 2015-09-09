@@ -26,7 +26,7 @@ namespace DistanceCalCulator
                 TrialMaker t = new TrialMaker("NavPlanner", Application.StartupPath + "\\RegFile.reg",
                     Environment.GetFolderPath(Environment.SpecialFolder.System) + "\\TMSetp.dbf",
                     "Email: hrishi18pathak@gmail.com\n  captsapathak@gmail.com",
-                   15,15, "786");
+                   60,Int32.MaxValue, "786");
 
                 byte[] MyOwnKey = { 97, 250, 1, 5, 84, 21, 7, 63,
             4, 54, 87, 56, 123, 10, 3, 62,
