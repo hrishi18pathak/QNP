@@ -52,22 +52,31 @@ namespace DistanceCalCulator
         double FuelTotal = 0.0;
         Int32 MaxRows { get; set; }
         private AutoCompleteStringCollection sc = null; // Column 0
-
+        public string SelectedInsertIdent = null;
+        private bool _isUpdating = false;
+       
         private const string PLUGIN_URL =
            @"http://earth-api-samples.googlecode.com/svn/trunk/demos/desktop-embedded/pluginhost.html";
 
         private IGEPlugin _ge = null;
 
-        private void RefreshAutoCompleteCollection()
+        public static AutoCompleteStringCollection GetAirportIdentAutoCompleteCollection()
         {
             listofAirports = AirportDatabase.Instance.getAirportsDictionary();
-            sc = new AutoCompleteStringCollection();
+            AutoCompleteStringCollection sc = new AutoCompleteStringCollection();
             // now just loop through the dictionary returned by the airportsdatabase object
             // and populate the autocomplete collection
             foreach (string ident_entry in listofAirports.Keys)
             {
                 sc.Add(ident_entry);
             }
+
+            return sc;
+        }
+
+        private void RefreshAutoCompleteCollection()
+        {
+            sc = GetAirportIdentAutoCompleteCollection();
         }
 
         public void InitializeAirportData()
@@ -416,7 +425,10 @@ namespace DistanceCalCulator
             }
             else
             {
-                ShowError("Please set the \"TO\" destination first!", "Error");
+                if (!_isUpdating)
+                {
+                    ShowError("Please set the \"TO\" destination first!", "Error");
+                }
             }
         }
 
@@ -1101,6 +1113,106 @@ namespace DistanceCalCulator
             {
                 dataGridView1.CommitEdit(DataGridViewDataErrorContexts.Commit);
             }
+        }
+
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                //Create the ContextStripMenu
+                ContextMenuStrip Menu = new ContextMenuStrip();
+                ToolStripMenuItem Insert = new ToolStripMenuItem("Insert");
+                ToolStripMenuItem Delete = new ToolStripMenuItem("Delete");
+                Insert.MouseDown += new MouseEventHandler(Insert_Click);
+                Delete.MouseDown += new MouseEventHandler(Delete_Click);
+                Menu.Items.AddRange(new ToolStripItem[] { Insert, Delete });
+                
+                //Assign created context menu strip to the DataGridView
+                dataGridView1.ContextMenuStrip = Menu; 
+                
+            }
+        }
+
+        private void Delete_Click(object sender, MouseEventArgs e)
+        {
+            _isUpdating = true;
+            //compute list of way points remaining
+            List<string> remainingWayPoints = new List<string>();
+            int currRowIndex = dataGridView1.CurrentCell.RowIndex;
+            string tbrFromWayPoint = dataGridView1.Rows[currRowIndex].Cells[0].Value.ToString();
+            string tbrToWayPoint = dataGridView1.Rows[currRowIndex].Cells[1].Value.ToString();
+            List<string> tbrWayPoints = new List<string>(new string[] { tbrFromWayPoint, tbrToWayPoint });
+            dataGridView1.DataError += dataGridView1_CatchDataError;
+                
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if(row.Cells[0].Value != null && !remainingWayPoints.Contains(row.Cells[0].Value.ToString()) &&
+                    !tbrWayPoints.Contains(row.Cells[0].Value.ToString())) 
+                {
+                    remainingWayPoints.Add(row.Cells[0].Value.ToString());
+                }
+
+                if (row.Cells[1].Value != null && !remainingWayPoints.Contains(row.Cells[1].Value.ToString()) &&
+                    !tbrWayPoints.Contains(row.Cells[1].Value.ToString()))
+                {
+                    remainingWayPoints.Add(row.Cells[1].Value.ToString());
+                }
+            }
+
+            // clear both datagridviews
+            dataGridView1.Rows.Clear();
+            dataGridView2.Rows.Clear();
+            int rowIndex = 0;
+            for (int i = 0; i < remainingWayPoints.Count - 1; ++i)
+            {
+                dataGridView1.Rows.Add(1);
+                dataGridView1.Rows[rowIndex].Cells[0].Value = remainingWayPoints[i];
+                dataGridView1.Rows[rowIndex].Cells[1].Value = remainingWayPoints[i + 1];
+                ++rowIndex;
+            }
+
+            dataGridView1.Rows.Add(1);
+            dataGridView1.Rows[rowIndex].Cells[0].Value = remainingWayPoints[remainingWayPoints.Count -  1];
+            dataGridView1.Rows.RemoveAt(dataGridView1.Rows.Count - 1);
+            _isUpdating = false;
+                    
+        }
+
+        private void Insert_Click(object sender, MouseEventArgs e)
+        {
+            int insertIdentRowIndex = dataGridView1.CurrentCell.RowIndex;
+            IdentInputDialogForm inp1 = new IdentInputDialogForm(this);
+            inp1.Left = (this.ClientSize.Width - inp1.Width) / 2;
+            inp1.Top = (this.ClientSize.Height - inp1.Height) / 2;
+            var diagResult = inp1.ShowDialog();
+            if (diagResult == System.Windows.Forms.DialogResult.OK)
+            {
+                _isUpdating = true;
+                dataGridView1.DataError += dataGridView1_CatchDataError;
+                // add extra row to provision for the insert
+                dataGridView1.Rows.Add(1);
+                for (int index = dataGridView1.Rows.Count - 2; index > insertIdentRowIndex; index--)
+                {
+                    dataGridView1.Rows[index + 1].Cells["clmnTo"].Value = dataGridView1.Rows[index].Cells["clmnTo"].Value;
+                    dataGridView1.Rows[index + 1].Cells["clmnFrom"].Value = dataGridView1.Rows[index].Cells["clmnFrom"].Value;
+                }
+
+                string oldToIdent = dataGridView1.Rows[insertIdentRowIndex].Cells["clmnTo"].Value.ToString();
+                dataGridView1.Rows[insertIdentRowIndex].Cells["clmnTo"].Value = inp1.txtIdentRepl.Text;
+                dataGridView1.Rows[insertIdentRowIndex + 1].Cells["clmnTo"].Value = oldToIdent;
+                dataGridView1.Rows[insertIdentRowIndex + 1].Cells["clmnFrom"].Value = inp1.txtIdentRepl.Text;
+                _isUpdating = false;
+            }
+            else
+            {
+
+            }
+                     
+        }
+
+        void dataGridView1_CatchDataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            // gobble data error;
         }
     }
 }

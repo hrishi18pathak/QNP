@@ -216,8 +216,8 @@
             dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle21;
-            this.dataGridView1.Location = new System.Drawing.Point(28, 31);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dataGridView1.Location = new System.Drawing.Point(37, 38);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -230,9 +230,11 @@
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle22;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dataGridView1.Size = new System.Drawing.Size(2114, 627);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(2819, 777);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             this.dataGridView1.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dataGridView1_CellValidating);
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             this.dataGridView1.CurrentCellDirtyStateChanged += new System.EventHandler(this.dataGridView1_CurrentCellDirtyStateChanged_1);
@@ -534,10 +536,10 @@
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.DarkRed;
-            this.button1.Location = new System.Drawing.Point(2378, 1265);
-            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button1.Location = new System.Drawing.Point(3171, 1569);
+            this.button1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(178, 67);
+            this.button1.Size = new System.Drawing.Size(237, 83);
             this.button1.TabIndex = 9;
             this.button1.Text = "EXIT TO MAIN";
             this.button1.UseVisualStyleBackColor = true;
@@ -557,11 +559,11 @@
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Maroon;
-            this.groupBox1.Location = new System.Drawing.Point(24, 23);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Location = new System.Drawing.Point(32, 29);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.groupBox1.Size = new System.Drawing.Size(2142, 731);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.groupBox1.Size = new System.Drawing.Size(2856, 906);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nav Plan";
@@ -569,30 +571,30 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(1574, 683);
-            this.label14.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label14.Location = new System.Drawing.Point(2099, 847);
+            this.label14.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(161, 29);
+            this.label14.Size = new System.Drawing.Size(195, 35);
             this.label14.TabIndex = 10;
             this.label14.Text = "TOTAL FUEL";
             // 
             // lblSpeed
             // 
             this.lblSpeed.AutoSize = true;
-            this.lblSpeed.Location = new System.Drawing.Point(1072, 683);
-            this.lblSpeed.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblSpeed.Location = new System.Drawing.Point(1429, 847);
+            this.lblSpeed.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblSpeed.Name = "lblSpeed";
-            this.lblSpeed.Size = new System.Drawing.Size(268, 29);
+            this.lblSpeed.Size = new System.Drawing.Size(324, 35);
             this.lblSpeed.TabIndex = 9;
             this.lblSpeed.Text = "TOTAL TIME (hr : min)";
             // 
             // lblTotalDist
             // 
             this.lblTotalDist.AutoSize = true;
-            this.lblTotalDist.Location = new System.Drawing.Point(294, 685);
-            this.lblTotalDist.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblTotalDist.Location = new System.Drawing.Point(392, 849);
+            this.lblTotalDist.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblTotalDist.Name = "lblTotalDist";
-            this.lblTotalDist.Size = new System.Drawing.Size(212, 29);
+            this.lblTotalDist.Size = new System.Drawing.Size(257, 35);
             this.lblTotalDist.TabIndex = 8;
             this.lblTotalDist.Text = "TOTAL DIST (nm)";
             // 
@@ -600,11 +602,11 @@
             // 
             this.txtTotalFuel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtTotalFuel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalFuel.Location = new System.Drawing.Point(1724, 681);
-            this.txtTotalFuel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtTotalFuel.Location = new System.Drawing.Point(2299, 844);
+            this.txtTotalFuel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txtTotalFuel.Name = "txtTotalFuel";
             this.txtTotalFuel.ReadOnly = true;
-            this.txtTotalFuel.Size = new System.Drawing.Size(114, 35);
+            this.txtTotalFuel.Size = new System.Drawing.Size(151, 42);
             this.txtTotalFuel.TabIndex = 7;
             this.txtTotalFuel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -612,11 +614,11 @@
             // 
             this.txtTotalTime.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtTotalTime.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalTime.Location = new System.Drawing.Point(1332, 679);
-            this.txtTotalTime.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtTotalTime.Location = new System.Drawing.Point(1776, 842);
+            this.txtTotalTime.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txtTotalTime.Name = "txtTotalTime";
             this.txtTotalTime.ReadOnly = true;
-            this.txtTotalTime.Size = new System.Drawing.Size(114, 35);
+            this.txtTotalTime.Size = new System.Drawing.Size(151, 42);
             this.txtTotalTime.TabIndex = 6;
             this.txtTotalTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -624,11 +626,11 @@
             // 
             this.txtTotalDist.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtTotalDist.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalDist.Location = new System.Drawing.Point(504, 681);
-            this.txtTotalDist.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtTotalDist.Location = new System.Drawing.Point(672, 844);
+            this.txtTotalDist.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txtTotalDist.Name = "txtTotalDist";
             this.txtTotalDist.ReadOnly = true;
-            this.txtTotalDist.Size = new System.Drawing.Size(114, 35);
+            this.txtTotalDist.Size = new System.Drawing.Size(151, 42);
             this.txtTotalDist.TabIndex = 5;
             this.txtTotalDist.Text = "0";
             this.txtTotalDist.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -639,21 +641,21 @@
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.Maroon;
-            this.groupBox2.Location = new System.Drawing.Point(2178, 23);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox2.Location = new System.Drawing.Point(2904, 29);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.groupBox2.Size = new System.Drawing.Size(378, 92);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.groupBox2.Size = new System.Drawing.Size(504, 114);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Date ";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(136, 29);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dateTimePicker1.Location = new System.Drawing.Point(181, 36);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(226, 35);
+            this.dateTimePicker1.Size = new System.Drawing.Size(300, 42);
             this.dateTimePicker1.TabIndex = 0;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
@@ -662,11 +664,11 @@
             this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.numericUpDn_startFuel);
             this.groupBox3.ForeColor = System.Drawing.Color.Maroon;
-            this.groupBox3.Location = new System.Drawing.Point(2178, 379);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox3.Location = new System.Drawing.Point(2904, 470);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.groupBox3.Size = new System.Drawing.Size(378, 133);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.groupBox3.Size = new System.Drawing.Size(504, 165);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Start Fuel";
@@ -675,10 +677,10 @@
             // 
             this.label16.AutoSize = true;
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(14, 63);
-            this.label16.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label16.Location = new System.Drawing.Point(19, 78);
+            this.label16.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(54, 25);
+            this.label16.Size = new System.Drawing.Size(71, 32);
             this.label16.TabIndex = 5;
             this.label16.Text = "Fuel";
             // 
@@ -690,15 +692,15 @@
             0,
             0,
             0});
-            this.numericUpDn_startFuel.Location = new System.Drawing.Point(136, 56);
-            this.numericUpDn_startFuel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.numericUpDn_startFuel.Location = new System.Drawing.Point(181, 69);
+            this.numericUpDn_startFuel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.numericUpDn_startFuel.Maximum = new decimal(new int[] {
             5000,
             0,
             0,
             0});
             this.numericUpDn_startFuel.Name = "numericUpDn_startFuel";
-            this.numericUpDn_startFuel.Size = new System.Drawing.Size(230, 37);
+            this.numericUpDn_startFuel.Size = new System.Drawing.Size(307, 44);
             this.numericUpDn_startFuel.TabIndex = 0;
             this.numericUpDn_startFuel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numericUpDn_startFuel.ValueChanged += new System.EventHandler(this.startFuelBox_ValueChanged);
@@ -710,21 +712,21 @@
             this.groupBox4.Controls.Add(this.dataGridView2);
             this.groupBox4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.ForeColor = System.Drawing.Color.Black;
-            this.groupBox4.Location = new System.Drawing.Point(26, 756);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox4.Location = new System.Drawing.Point(35, 937);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.groupBox4.Size = new System.Drawing.Size(2140, 583);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.groupBox4.Size = new System.Drawing.Size(2853, 723);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Relative Bearings / Additional Information";
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1174, 510);
-            this.button3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button3.Location = new System.Drawing.Point(1565, 632);
+            this.button3.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(150, 44);
+            this.button3.Size = new System.Drawing.Size(200, 55);
             this.button3.TabIndex = 2;
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
@@ -732,11 +734,11 @@
             // additional_Info_richTextBox
             // 
             this.additional_Info_richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.additional_Info_richTextBox.Location = new System.Drawing.Point(1150, 38);
-            this.additional_Info_richTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.additional_Info_richTextBox.Location = new System.Drawing.Point(1533, 47);
+            this.additional_Info_richTextBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.additional_Info_richTextBox.Name = "additional_Info_richTextBox";
             this.additional_Info_richTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.additional_Info_richTextBox.Size = new System.Drawing.Size(974, 525);
+            this.additional_Info_richTextBox.Size = new System.Drawing.Size(1297, 650);
             this.additional_Info_richTextBox.TabIndex = 1;
             this.additional_Info_richTextBox.Text = resources.GetString("additional_Info_richTextBox.Text");
             this.additional_Info_richTextBox.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
@@ -779,8 +781,8 @@
             dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle33;
-            this.dataGridView2.Location = new System.Drawing.Point(24, 35);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dataGridView2.Location = new System.Drawing.Point(32, 43);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.dataGridView2.Name = "dataGridView2";
             dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Control;
@@ -793,7 +795,7 @@
             this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle34;
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridView2.Size = new System.Drawing.Size(1114, 533);
+            this.dataGridView2.Size = new System.Drawing.Size(1485, 661);
             this.dataGridView2.TabIndex = 0;
             this.dataGridView2.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellValueChanged_1);
             this.dataGridView2.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridView2_EditingControlShowing_1);
@@ -915,11 +917,11 @@
             this.groupBox5.Controls.Add(this.timeTakeoffBox);
             this.groupBox5.Controls.Add(this.timeStartBox);
             this.groupBox5.ForeColor = System.Drawing.Color.Maroon;
-            this.groupBox5.Location = new System.Drawing.Point(2178, 523);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox5.Location = new System.Drawing.Point(2904, 649);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.groupBox5.Size = new System.Drawing.Size(378, 229);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.groupBox5.Size = new System.Drawing.Size(504, 284);
             this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Time Record";
@@ -929,10 +931,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(0, 179);
-            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label4.Location = new System.Drawing.Point(0, 222);
+            this.label4.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 26);
+            this.label4.Size = new System.Drawing.Size(144, 32);
             this.label4.TabIndex = 7;
             this.label4.Text = "Switch Off";
             // 
@@ -940,10 +942,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(10, 133);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label3.Location = new System.Drawing.Point(13, 165);
+            this.label3.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 25);
+            this.label3.Size = new System.Drawing.Size(118, 32);
             this.label3.TabIndex = 6;
             this.label3.Text = "Landing";
             // 
@@ -951,10 +953,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(6, 87);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Location = new System.Drawing.Point(8, 108);
+            this.label2.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 25);
+            this.label2.Size = new System.Drawing.Size(123, 32);
             this.label2.TabIndex = 5;
             this.label2.Text = "Take Off";
             // 
@@ -962,43 +964,43 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(6, 42);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(8, 52);
+            this.label1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 25);
+            this.label1.Size = new System.Drawing.Size(118, 32);
             this.label1.TabIndex = 4;
             this.label1.Text = "Start Up";
             // 
             // timeLandBox
             // 
-            this.timeLandBox.Location = new System.Drawing.Point(136, 131);
-            this.timeLandBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.timeLandBox.Location = new System.Drawing.Point(181, 162);
+            this.timeLandBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.timeLandBox.Name = "timeLandBox";
-            this.timeLandBox.Size = new System.Drawing.Size(226, 31);
+            this.timeLandBox.Size = new System.Drawing.Size(300, 38);
             this.timeLandBox.TabIndex = 3;
             // 
             // timeSWoffBox
             // 
-            this.timeSWoffBox.Location = new System.Drawing.Point(136, 179);
-            this.timeSWoffBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.timeSWoffBox.Location = new System.Drawing.Point(181, 222);
+            this.timeSWoffBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.timeSWoffBox.Name = "timeSWoffBox";
-            this.timeSWoffBox.Size = new System.Drawing.Size(226, 31);
+            this.timeSWoffBox.Size = new System.Drawing.Size(300, 38);
             this.timeSWoffBox.TabIndex = 2;
             // 
             // timeTakeoffBox
             // 
-            this.timeTakeoffBox.Location = new System.Drawing.Point(136, 87);
-            this.timeTakeoffBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.timeTakeoffBox.Location = new System.Drawing.Point(181, 108);
+            this.timeTakeoffBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.timeTakeoffBox.Name = "timeTakeoffBox";
-            this.timeTakeoffBox.Size = new System.Drawing.Size(226, 31);
+            this.timeTakeoffBox.Size = new System.Drawing.Size(300, 38);
             this.timeTakeoffBox.TabIndex = 1;
             // 
             // timeStartBox
             // 
-            this.timeStartBox.Location = new System.Drawing.Point(136, 37);
-            this.timeStartBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.timeStartBox.Location = new System.Drawing.Point(181, 46);
+            this.timeStartBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.timeStartBox.Name = "timeStartBox";
-            this.timeStartBox.Size = new System.Drawing.Size(226, 31);
+            this.timeStartBox.Size = new System.Drawing.Size(300, 38);
             this.timeStartBox.TabIndex = 0;
             // 
             // groupBox6
@@ -1009,11 +1011,11 @@
             this.groupBox6.Controls.Add(this.label8);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.ForeColor = System.Drawing.Color.Maroon;
-            this.groupBox6.Location = new System.Drawing.Point(2178, 227);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox6.Location = new System.Drawing.Point(2904, 281);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.groupBox6.Size = new System.Drawing.Size(378, 140);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.groupBox6.Size = new System.Drawing.Size(504, 174);
             this.groupBox6.TabIndex = 2;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Crew";
@@ -1028,10 +1030,10 @@
             "PILOT4",
             "PILOT5",
             "PILOT6"});
-            this.copilotNameBox.Location = new System.Drawing.Point(136, 85);
-            this.copilotNameBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.copilotNameBox.Location = new System.Drawing.Point(181, 105);
+            this.copilotNameBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.copilotNameBox.Name = "copilotNameBox";
-            this.copilotNameBox.Size = new System.Drawing.Size(226, 37);
+            this.copilotNameBox.Size = new System.Drawing.Size(300, 44);
             this.copilotNameBox.TabIndex = 2;
             this.copilotNameBox.SelectedIndexChanged += new System.EventHandler(this.copilotNameBox_SelectedIndexChanged);
             // 
@@ -1045,10 +1047,10 @@
             "PILOT4",
             "PILOT5",
             "PILOT6"});
-            this.pilotNameBox.Location = new System.Drawing.Point(136, 31);
-            this.pilotNameBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pilotNameBox.Location = new System.Drawing.Point(181, 38);
+            this.pilotNameBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.pilotNameBox.Name = "pilotNameBox";
-            this.pilotNameBox.Size = new System.Drawing.Size(226, 37);
+            this.pilotNameBox.Size = new System.Drawing.Size(300, 44);
             this.pilotNameBox.TabIndex = 1;
             this.pilotNameBox.SelectedIndexChanged += new System.EventHandler(this.pilotNameBox_SelectedIndexChanged);
             // 
@@ -1056,10 +1058,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(14, 87);
-            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label7.Location = new System.Drawing.Point(19, 108);
+            this.label7.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(98, 29);
+            this.label7.Size = new System.Drawing.Size(120, 36);
             this.label7.TabIndex = 5;
             this.label7.Text = "Co Pilot";
             // 
@@ -1067,10 +1069,10 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(14, 42);
-            this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label8.Location = new System.Drawing.Point(19, 52);
+            this.label8.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 29);
+            this.label8.Size = new System.Drawing.Size(74, 36);
             this.label8.TabIndex = 4;
             this.label8.Text = "Pilot";
             // 
@@ -1080,11 +1082,11 @@
             this.groupBox7.Controls.Add(this.label6);
             this.groupBox7.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox7.ForeColor = System.Drawing.Color.Maroon;
-            this.groupBox7.Location = new System.Drawing.Point(2178, 127);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox7.Location = new System.Drawing.Point(2904, 157);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.groupBox7.Size = new System.Drawing.Size(378, 88);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.groupBox7.Size = new System.Drawing.Size(504, 109);
             this.groupBox7.TabIndex = 1;
             this.groupBox7.TabStop = false;
             // 
@@ -1096,10 +1098,10 @@
             "VT OPJ",
             "VT JSE",
             "RANDOM"});
-            this.callsignBox.Location = new System.Drawing.Point(136, 29);
-            this.callsignBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.callsignBox.Location = new System.Drawing.Point(181, 36);
+            this.callsignBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.callsignBox.Name = "callsignBox";
-            this.callsignBox.Size = new System.Drawing.Size(226, 35);
+            this.callsignBox.Size = new System.Drawing.Size(300, 43);
             this.callsignBox.TabIndex = 0;
             this.callsignBox.SelectedIndexChanged += new System.EventHandler(this.callsignBox_SelectedIndexChanged);
             // 
@@ -1108,10 +1110,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(10, 40);
-            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label6.Location = new System.Drawing.Point(13, 50);
+            this.label6.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(97, 25);
+            this.label6.Size = new System.Drawing.Size(127, 32);
             this.label6.TabIndex = 1;
             this.label6.Text = "Call Sign";
             // 
@@ -1131,11 +1133,11 @@
             this.groupBox8.Controls.Add(this.txtBox_Contingency);
             this.groupBox8.Controls.Add(this.txtBox_fltFuel);
             this.groupBox8.ForeColor = System.Drawing.Color.Maroon;
-            this.groupBox8.Location = new System.Drawing.Point(2178, 758);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox8.Location = new System.Drawing.Point(2904, 940);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.groupBox8.Size = new System.Drawing.Size(378, 354);
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.groupBox8.Size = new System.Drawing.Size(504, 439);
             this.groupBox8.TabIndex = 5;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Total Flt Fuel Calculations";
@@ -1144,10 +1146,10 @@
             // 
             this.numericUpDn_AddReserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDn_AddReserve.ForeColor = System.Drawing.Color.Maroon;
-            this.numericUpDn_AddReserve.Location = new System.Drawing.Point(236, 231);
-            this.numericUpDn_AddReserve.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.numericUpDn_AddReserve.Location = new System.Drawing.Point(315, 286);
+            this.numericUpDn_AddReserve.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.numericUpDn_AddReserve.Name = "numericUpDn_AddReserve";
-            this.numericUpDn_AddReserve.Size = new System.Drawing.Size(118, 32);
+            this.numericUpDn_AddReserve.Size = new System.Drawing.Size(157, 39);
             this.numericUpDn_AddReserve.TabIndex = 2;
             this.numericUpDn_AddReserve.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numericUpDn_AddReserve.ValueChanged += new System.EventHandler(this.numericUpDn_Reserve_ValueChanged);
@@ -1156,10 +1158,10 @@
             // 
             this.numericUpDn_StartTaxiHold.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDn_StartTaxiHold.ForeColor = System.Drawing.Color.Black;
-            this.numericUpDn_StartTaxiHold.Location = new System.Drawing.Point(236, 38);
-            this.numericUpDn_StartTaxiHold.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.numericUpDn_StartTaxiHold.Location = new System.Drawing.Point(315, 47);
+            this.numericUpDn_StartTaxiHold.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.numericUpDn_StartTaxiHold.Name = "numericUpDn_StartTaxiHold";
-            this.numericUpDn_StartTaxiHold.Size = new System.Drawing.Size(118, 32);
+            this.numericUpDn_StartTaxiHold.Size = new System.Drawing.Size(157, 39);
             this.numericUpDn_StartTaxiHold.TabIndex = 0;
             this.numericUpDn_StartTaxiHold.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numericUpDn_StartTaxiHold.ValueChanged += new System.EventHandler(this.numericUpDn_StartTaxiHold_ValueChanged);
@@ -1168,10 +1170,10 @@
             // 
             this.label15.AutoSize = true;
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(24, 231);
-            this.label15.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label15.Location = new System.Drawing.Point(32, 286);
+            this.label15.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(193, 25);
+            this.label15.Size = new System.Drawing.Size(255, 32);
             this.label15.TabIndex = 12;
             this.label15.Text = "Additional Reserve";
             // 
@@ -1181,11 +1183,11 @@
             this.groupBox9.Controls.Add(this.txtBox_Tot_FltFuel);
             this.groupBox9.Controls.Add(this.label13);
             this.groupBox9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox9.Location = new System.Drawing.Point(10, 267);
-            this.groupBox9.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox9.Location = new System.Drawing.Point(13, 331);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.groupBox9.Size = new System.Drawing.Size(356, 71);
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.groupBox9.Size = new System.Drawing.Size(475, 88);
             this.groupBox9.TabIndex = 10;
             this.groupBox9.TabStop = false;
             // 
@@ -1193,11 +1195,11 @@
             // 
             this.txtBox_Tot_FltFuel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtBox_Tot_FltFuel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_Tot_FltFuel.Location = new System.Drawing.Point(224, 23);
-            this.txtBox_Tot_FltFuel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtBox_Tot_FltFuel.Location = new System.Drawing.Point(299, 29);
+            this.txtBox_Tot_FltFuel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txtBox_Tot_FltFuel.Name = "txtBox_Tot_FltFuel";
             this.txtBox_Tot_FltFuel.ReadOnly = true;
-            this.txtBox_Tot_FltFuel.Size = new System.Drawing.Size(114, 32);
+            this.txtBox_Tot_FltFuel.Size = new System.Drawing.Size(151, 39);
             this.txtBox_Tot_FltFuel.TabIndex = 12;
             this.txtBox_Tot_FltFuel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1206,10 +1208,10 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(18, 27);
-            this.label13.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label13.Location = new System.Drawing.Point(24, 33);
+            this.label13.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(170, 26);
+            this.label13.Size = new System.Drawing.Size(219, 32);
             this.label13.TabIndex = 11;
             this.label13.Text = "TOT FLT FUEL";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1218,10 +1220,10 @@
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(196, 137);
-            this.label12.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label12.Location = new System.Drawing.Point(261, 170);
+            this.label12.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(46, 25);
+            this.label12.Size = new System.Drawing.Size(61, 32);
             this.label12.TabIndex = 9;
             this.label12.Text = "min";
             // 
@@ -1229,15 +1231,15 @@
             // 
             this.numericUpDn_Reserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDn_Reserve.ForeColor = System.Drawing.Color.Maroon;
-            this.numericUpDn_Reserve.Location = new System.Drawing.Point(120, 133);
-            this.numericUpDn_Reserve.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.numericUpDn_Reserve.Location = new System.Drawing.Point(160, 165);
+            this.numericUpDn_Reserve.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.numericUpDn_Reserve.Minimum = new decimal(new int[] {
             20,
             0,
             0,
             0});
             this.numericUpDn_Reserve.Name = "numericUpDn_Reserve";
-            this.numericUpDn_Reserve.Size = new System.Drawing.Size(68, 32);
+            this.numericUpDn_Reserve.Size = new System.Drawing.Size(91, 39);
             this.numericUpDn_Reserve.TabIndex = 1;
             this.numericUpDn_Reserve.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numericUpDn_Reserve.Value = new decimal(new int[] {
@@ -1251,10 +1253,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(18, 185);
-            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label5.Location = new System.Drawing.Point(24, 229);
+            this.label5.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(187, 25);
+            this.label5.Size = new System.Drawing.Size(245, 32);
             this.label5.TabIndex = 7;
             this.label5.Text = "10 % Contingency";
             // 
@@ -1262,10 +1264,10 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(20, 137);
-            this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label9.Location = new System.Drawing.Point(27, 170);
+            this.label9.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(92, 25);
+            this.label9.Size = new System.Drawing.Size(120, 32);
             this.label9.TabIndex = 6;
             this.label9.Text = "Reserve";
             // 
@@ -1273,10 +1275,10 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(22, 88);
-            this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label10.Location = new System.Drawing.Point(29, 109);
+            this.label10.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 25);
+            this.label10.Size = new System.Drawing.Size(110, 32);
             this.label10.TabIndex = 5;
             this.label10.Text = "Flt Fuel";
             // 
@@ -1284,10 +1286,10 @@
             // 
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(20, 42);
-            this.label11.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label11.Location = new System.Drawing.Point(27, 52);
+            this.label11.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(190, 25);
+            this.label11.Size = new System.Drawing.Size(248, 32);
             this.label11.TabIndex = 4;
             this.label11.Text = "Start + Taxi + Hold";
             // 
@@ -1295,11 +1297,11 @@
             // 
             this.txtBox_Reserve.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtBox_Reserve.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_Reserve.Location = new System.Drawing.Point(238, 131);
-            this.txtBox_Reserve.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtBox_Reserve.Location = new System.Drawing.Point(317, 162);
+            this.txtBox_Reserve.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txtBox_Reserve.Name = "txtBox_Reserve";
             this.txtBox_Reserve.ReadOnly = true;
-            this.txtBox_Reserve.Size = new System.Drawing.Size(114, 32);
+            this.txtBox_Reserve.Size = new System.Drawing.Size(151, 39);
             this.txtBox_Reserve.TabIndex = 7;
             this.txtBox_Reserve.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1307,11 +1309,11 @@
             // 
             this.txtBox_Contingency.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtBox_Contingency.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_Contingency.Location = new System.Drawing.Point(238, 179);
-            this.txtBox_Contingency.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtBox_Contingency.Location = new System.Drawing.Point(317, 222);
+            this.txtBox_Contingency.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txtBox_Contingency.Name = "txtBox_Contingency";
             this.txtBox_Contingency.ReadOnly = true;
-            this.txtBox_Contingency.Size = new System.Drawing.Size(114, 32);
+            this.txtBox_Contingency.Size = new System.Drawing.Size(151, 39);
             this.txtBox_Contingency.TabIndex = 9;
             this.txtBox_Contingency.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1319,11 +1321,11 @@
             // 
             this.txtBox_fltFuel.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.txtBox_fltFuel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox_fltFuel.Location = new System.Drawing.Point(238, 87);
-            this.txtBox_fltFuel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtBox_fltFuel.Location = new System.Drawing.Point(317, 108);
+            this.txtBox_fltFuel.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txtBox_fltFuel.Name = "txtBox_fltFuel";
             this.txtBox_fltFuel.ReadOnly = true;
-            this.txtBox_fltFuel.Size = new System.Drawing.Size(114, 32);
+            this.txtBox_fltFuel.Size = new System.Drawing.Size(151, 39);
             this.txtBox_fltFuel.TabIndex = 3;
             this.txtBox_fltFuel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1331,10 +1333,10 @@
             // 
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.DarkRed;
-            this.btnSave.Location = new System.Drawing.Point(2178, 1265);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnSave.Location = new System.Drawing.Point(2904, 1569);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(176, 67);
+            this.btnSave.Size = new System.Drawing.Size(235, 83);
             this.btnSave.TabIndex = 8;
             this.btnSave.Text = "CREAT PDF REPORT";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -1351,10 +1353,10 @@
             this.button2.ForeColor = System.Drawing.Color.Blue;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(2266, 1142);
-            this.button2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button2.Location = new System.Drawing.Point(3021, 1416);
+            this.button2.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(208, 112);
+            this.button2.Size = new System.Drawing.Size(277, 139);
             this.button2.TabIndex = 10;
             this.button2.Text = " View On Google Earth";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -1363,9 +1365,9 @@
             // 
             // FlightPlanForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2568, 1348);
+            this.ClientSize = new System.Drawing.Size(3184, 1672);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.groupBox8);
@@ -1380,7 +1382,7 @@
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FlightPlanForm";
