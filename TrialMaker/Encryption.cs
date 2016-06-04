@@ -6,6 +6,7 @@ using System.Security.Cryptography;
 
 namespace SoftwareLocker
 {
+	/* This is Encryption */
     static class Encryption
     {
         static public string InverseByBase(string st, int MoveBase)
