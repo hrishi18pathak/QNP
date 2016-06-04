@@ -343,7 +343,6 @@ namespace DistanceCalCulator
             }
             catch (Exception ex)
             {
-
             }
             finally
             {
