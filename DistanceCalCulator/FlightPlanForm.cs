@@ -290,12 +290,11 @@ namespace DistanceCalCulator
                     case 18:
                         Fuel();
                         break;
-                    case 4:
                     case 5:
-                    case 7:
+                    case 6:
                     case 8:
-                    case 13:
-                    case 17:
+                    case 9:
+                    case 14:
                         UpdateEntireRow(e.RowIndex);
                         break;
                 }
