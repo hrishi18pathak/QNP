@@ -173,7 +173,8 @@
             this.Text = " ";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-
+            string version = typeof(Main_Form_New_Design2).Assembly.GetName().Version.ToString(3);
+            this.Text = "QNP " + version;
         }
 
         #endregion
