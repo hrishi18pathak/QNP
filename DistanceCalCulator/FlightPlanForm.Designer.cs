@@ -98,7 +98,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.numericUpDn_startFuel = new System.Windows.Forms.NumericUpDown();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.additional_Info_richTextBox = new System.Windows.Forms.RichTextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.clmn_dgrv2_Location = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -707,7 +706,6 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.button3);
             this.groupBox4.Controls.Add(this.additional_Info_richTextBox);
             this.groupBox4.Controls.Add(this.dataGridView2);
             this.groupBox4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -720,16 +718,6 @@
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Relative Bearings / Additional Information";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(1565, 632);
-            this.button3.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(200, 55);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // additional_Info_richTextBox
             // 
@@ -1367,7 +1355,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(3184, 1672);
+            this.ClientSize = new System.Drawing.Size(3172, 1672);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.groupBox8);
@@ -1503,7 +1491,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PayLoad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Refuel;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmnActualTime;
-        private System.Windows.Forms.Button button3;
 
         public System.Windows.Forms.DataGridViewCellEventHandler dataGridView1_RowLeave { get; set; }
     }
