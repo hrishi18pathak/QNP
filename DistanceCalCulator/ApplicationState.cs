@@ -83,7 +83,7 @@ namespace DistanceCalCulator
             updCmd.Connection = _dataConn;
             StringBuilder updQuery = new StringBuilder();
             updQuery.Append("UPDATE ApplicationState set ");
-            updQuery.Append("registeredClientName = '" + cruiseSpeed + "'");
+            updQuery.Append("registeredClientName = '" + clientName + "'");
             updCmd.CommandText = updQuery.ToString();
             updCmd.ExecuteNonQuery();
         }
